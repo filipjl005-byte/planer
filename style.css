@@ -1,0 +1,39 @@
+/* Wspólny wygląd strony. */
+* { box-sizing: border-box; }
+body { margin: 0; background: #f2f3f5; color: #242424; font-family: Arial, sans-serif; line-height: 1.5; }
+header, main, footer { width: calc(100% - 32px); max-width: 760px; margin: auto; }
+header { padding: 28px 0 20px; }
+h1 { margin: 0; font-size: 30px; }
+header p { margin: 4px 0 16px; color: #555; }
+nav { display: flex; gap: 20px; }
+a { color: #245793; }
+a:hover { text-decoration: none; }
+section { padding: 24px; margin-bottom: 20px; background: white; border: 1px solid #d2d6dc; border-radius: 4px; scroll-margin-top: 16px; }
+h2 { font-size: 21px; margin: 0 0 16px; }
+label[for="nowe-zadanie"] { display: block; margin-bottom: 6px; }
+.pole-formularza { display: flex; gap: 8px; }
+input, button { font: inherit; }
+input[type="text"] { flex: 1; min-width: 0; border: 1px solid #9099a4; border-radius: 3px; padding: 9px 10px; }
+button { padding: 9px 16px; border: 1px solid #245793; border-radius: 3px; background: #245793; color: white; cursor: pointer; }
+button:hover { background: #1c4574; }
+:focus-visible { outline: 3px solid #b56914; outline-offset: 3px; }
+#lista-zadan { list-style: none; padding: 0; margin: 18px 0; }
+#lista-zadan > li { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-bottom: 1px solid #e1e3e6; padding: 12px 0; }
+#lista-zadan label { display: flex; align-items: center; gap: 10px; cursor: pointer; min-width: 0; }
+#lista-zadan label span { overflow-wrap: anywhere; }
+input[type="checkbox"] { width: 18px; height: 18px; accent-color: #245793; flex-shrink: 0; }
+#lista-zadan li:has(input:checked) label span { text-decoration: line-through; color: #666; }
+.usun { background: white; color: #444; border-color: #b2b7bf; padding: 4px 10px; font-size: 14px; }
+.usun:hover { background: #eceef1; }
+#postep { font-weight: bold; margin-bottom: 6px; }
+.uwaga { margin: 0; color: #555; font-size: 13px; }
+ol { padding-left: 22px; }
+ol li { margin-bottom: 6px; }
+#wskazowki > p { margin-bottom: 0; }
+footer { border-top: 1px solid #d2d6dc; padding: 14px 0 24px; font-size: 13px; color: #555; }
+/* Na telefonie przycisk jest pod polem tekstowym. */
+@media (max-width: 480px) {
+  header { padding-top: 20px; }
+  section { padding: 18px; }
+  .pole-formularza { flex-direction: column; }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lista zadań do szkoły.">
+  <title>Planer nauki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Planer nauki</h1>
+    <p>Lista zadań do szkoły.</p>
+    <nav aria-label="Nawigacja">
+      <a href="#planer">Zadania</a>
+      <a href="#wskazowki">Jak korzystać</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- JavaScript dodaje zadania do listy poniżej formularza. -->
+    <section id="planer" aria-labelledby="tytul-planera">
+      <h2 id="tytul-planera">Zadania</h2>
+      <form id="formularz">
+        <label for="nowe-zadanie">Nowe zadanie</label>
+        <div class="pole-formularza">
+          <input id="nowe-zadanie" type="text" placeholder="Np. matematyka — zadania 1–3" maxlength="100" required>
+          <button type="submit">Dodaj</button>
+        </div>
+      </form>
+      <ul id="lista-zadan" aria-label="Lista zadań"></ul>
+      <p id="postep" role="status" aria-live="polite"></p>
+      <p class="uwaga">Po odświeżeniu strony lista wraca do dwóch przykładowych zadań.</p>
+    </section>
+
+    <section id="wskazowki" aria-labelledby="tytul-instrukcji">
+      <h2 id="tytul-instrukcji">Jak korzystać</h2>
+      <ol>
+        <li>Wpisz zadanie i kliknij „Dodaj” albo naciśnij Enter.</li>
+        <li>Zaznacz pole obok zrobionego zadania.</li>
+        <li>Przycisk „Usuń” usuwa zadanie z listy.</li>
+      </ol>
+      <p>Licznik pod listą pokazuje, ile zadań jest zrobionych.</p>
+    </section>
+  </main>
+  <footer>Planer nauki</footer>
+  <script src="script.js"></script>
+</body>
+</html>
